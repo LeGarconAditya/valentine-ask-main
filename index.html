@@ -2,45 +2,130 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Valentine Letter</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <title>A Letter For You ❤️</title>
+    <link rel="stylesheet" href="style.css" />
+    
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Aldrich&family=Pixelify+Sans:wght@400..700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Pixelify+Sans:wght@400..700&family=Quicksand:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <title>Document</title>
   </head>
   <body>
     <!-- Envelope Screen -->
     <div id="envelope-container">
       <img src="envelope.png" alt="Envelope" id="envelope" />
-      <p>♡ Letter for You ♡</p>
+      <p class="envelope-text">♡ A Special Letter For You ♡</p>
     </div>
 
     <!-- Letter Screen -->
     <div id="letter-container">
-      <div class="letter-window">
-        <h1 id="letter-title">Will you be my Valentine?</h1>
+      <div class="letter-window" id="letter-window">
+        <div class="letter-content">
+        
+          <!-- Step 1: Introduction -->
+          <div class="letter-step step-1">
+            <h1 class="letter-title">My Dearest Arshi,</h1>
+            
+            <div class="letter-text">
+              <p>Since the moment we met, I've known you were unlike anyone else. While the world often feels rushed and noisy, you are calm, genuine, and completely yourself.</p>
 
-        <img src="cat_heart.gif" class="cat" id="letter-cat" />
+              <p>That is your magic. You don't put on a performance; you simply exist with a quiet strength and a kindness that feels like a warm embrace after a long storm.</p>
+            </div>
 
-        <div class="buttons" id="letter-buttons">
-          <img src="yes.png" class="btn yes-btn" alt="Yes" />
-
-          <div class="no-wrapper">
-            <img src="no.png" class="btn no-btn" alt="No" />
+            <img src="cat_heart.gif" class="cat" alt="Cat with heart" />
+            
+            <button class="next-btn" onclick="showStep2()">Continue Reading ❤️</button>
           </div>
-        </div>
 
-        <p id="final-text" class="final-text" style="display: none">
-          <strong>Valentine Date:</strong> Meow Restaurant at 7pm. Dress fancy!
-        </p>
+          <!-- Step 2: The Feelings -->
+          <div class="letter-step step-2" style="display: none;">
+            <h2 class="step-title">What You Mean To Me...</h2>
+            
+            <div class="letter-text">
+              <p>What truly sets you apart is the peace you bring me. In your presence, the chaos of the world just dissolves. My racing thoughts finally slow down, and I can actually breathe.</p>
+
+              <p>With you, I don't have to go looking for peace because it finds me effortlessly. Your voice is so soothing, and your laughter feels like sunlight breaking through the clouds.</p>
+
+              <p>When I look at you, everything feels right, steady, and safe.</p>
+            </div>
+
+            <img src="cat_heart.gif" class="cat" alt="Cat with heart" />
+            
+            <button class="next-btn" onclick="showStep3()">Keep Reading ❤️</button>
+          </div>
+
+          <!-- Step 3: The Promise -->
+          <div class="letter-step step-3" style="display: none;">
+            <h2 class="step-title">My Promise To You...</h2>
+            
+            <div class="letter-text">
+              <p>Today, I want you to know that I have found my forever calm in you.</p>
+
+              <p>I promise to cherish the beautiful way you see life, to protect the serenity we share, and to love you with a devotion that reflects the quiet peace you give me.</p>
+              
+              <p>You aren't just different to me, you are my home. I want to spend every day making sure you feel as cherished as you make me feel.</p>
+            </div>
+
+            <img src="cat_heart.gif" class="cat" alt="Cat with heart" />
+            
+            <button class="next-btn" onclick="showQuestion()">One More Thing... ❤️</button>
+          </div>
+
+          <!-- Step 4: The Question -->
+          <div class="letter-step step-4" style="display: none;">
+            <h2 class="step-title">So, I Have To Ask...</h2>
+            
+            <p class="question">Will you be my Valentine? ❤️</p>
+
+            <img src="cat_heart.gif" class="cat" id="letter-cat" alt="Cat with heart" />
+
+            <div class="buttons" id="letter-buttons">
+              <img src="yes.png" class="btn yes-btn" alt="Yes" />
+              <div class="no-wrapper">
+                <img src="no.png" class="btn no-btn" alt="No" />
+              </div>
+            </div>
+          </div>
+
+          <!-- Final Message -->
+          <div id="final-text" class="final-text">
+            <p class="celebration">🎉 Yippeeee! 🎉</p>
+            
+            <div class="promise-section">
+              <p class="promise-header">💕 My Promise To You 💕</p>
+              
+              <p class="promise-text">
+                <span class="emoji">👑</span> I promise to treat you like my queen
+              </p>
+              
+              <p class="promise-text">
+                <span class="emoji">🌟</span> As I always do, and always will
+              </p>
+              
+              <p class="promise-text">
+                <span class="emoji">🙏</span> Thank you for still choosing me
+              </p>
+              
+              <p class="promise-text">
+                <span class="emoji">💖</span> And accepting all my flaws
+              </p>
+            </div>
+            
+            <div class="final-message">
+              <p class="love-declaration">I LOVE YOU SO MUCH, CUTU! ❤️</p>
+              <p class="subtitle">Forever and always yours ✨</p>
+            </div>
+          </div>
+            </div>
+          </div>
+          
+        </div>
       </div>
     </div>
+    
     <script src="script.js"></script>
   </body>
 </html>
